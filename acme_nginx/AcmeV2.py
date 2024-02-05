@@ -143,8 +143,8 @@ class AcmeV2(Acme):
             self.log.info("adding nginx virtual host and completing challenge")
             try:
                 challenge_dir = self._write_vhost()
-                self.log.info("sleeping for 30 seconds")
-                time.sleep(30)
+                self.log.info("sleeping for 10 seconds")
+                time.sleep(10)
                 self._write_challenge(challenge_dir, token, thumbprint)
             except Exception as e:
                 self.log.error(
