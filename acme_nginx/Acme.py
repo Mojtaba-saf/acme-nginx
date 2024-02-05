@@ -126,7 +126,6 @@ class Acme(object):
         vhost_data = """
 server {{
     listen 80;
-    listen [::]:80;
     server_name {domain};
     location /.well-known/acme-challenge/ {{
         alias {alias}/;
