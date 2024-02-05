@@ -114,9 +114,9 @@ class Acme(object):
         process_out = process.communicate()
         self.log.debug(process_out[0])
         self.log.debug(process_out[1])
-        if process.returncode > 0:
-            self.log.error("failed to reload nginx")
-            self.log.error(process_out[1])
+        # if process.returncode > 0:
+        #     self.log.error("failed to reload nginx")
+        #     self.log.error(process_out[1])
 
     def _write_vhost(self):
         """Write virtual host configuration for http"""
