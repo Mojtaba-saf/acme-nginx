@@ -109,7 +109,7 @@ class Acme(object):
         """Reload nginx"""
         self.log.info("running nginx -s reload")
         process = subprocess.Popen(
-            "nginx -s reload".split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE
+            "systemctl restart nginx".split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE
         )
         process_out = process.communicate()
         self.log.debug(process_out[0])
